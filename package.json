@@ -1,0 +1,28 @@
+{
+  "name": "Sproc13318",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brentgroves/Sproc13318.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brentgroves/Sproc13318/issues"
+  },
+  "homepage": "https://github.com/brentgroves/Sproc13318#readme",
+  "dependencies": {
+    "mqtt": "^3.0.0",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.1",
+    "prettier": "^1.19.1"
+  }
+}
