@@ -21,9 +21,9 @@ function main() {
   let mqttClient = mqtt.connect(config.MQTT);
 
   mqttClient.on('connect', function() {
-    mqttClient.subscribe('Plex13318-2', function(err) {
+    mqttClient.subscribe('Alarm13318-2', function(err) {
       if (!err) {
-        console.log('subscribed to: Plex13318-2');
+        console.log('subscribed to: Alarm13318-2');
       }
     });
   });
