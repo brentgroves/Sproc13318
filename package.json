@@ -19,7 +19,8 @@
   "homepage": "https://github.com/brentgroves/Sproc13318#readme",
   "dependencies": {
     "mqtt": "^3.0.0",
-    "mysql": "^2.17.1"
+    "mysql": "^2.17.1",
+    "node-datetime": "^2.1.2"
   },
   "devDependencies": {
     "eslint": "^6.7.1",
