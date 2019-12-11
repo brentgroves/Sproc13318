@@ -19,15 +19,23 @@ function DS13318(transDate) {
       console.log(`Data received from Db on ${transDate}:\n`);
       // console.log(resultSet[0][1]);
       resultSet[0].forEach(function(item, index) {
+        // Update GMT time to local time.
         var tz_transDate = item.TransDate;
         var pastDateTime = datetime.create(tz_transDate);
         var fmt = pastDateTime.format('Y-m-d H:M:S');
-        item.TransDate=fmt;  
+        item.TransDate=fmt;
         // console.log(item, index);
       });
       console.log(resultSet[0]);
-      let msgString = JSON.stringify(resultSet[0]);         
-      mqttClient.publish('Sproc13318', msgString);         
+      let msgString = JSON.stringify(resultSet[0]);
+      console.log(msgString);
+      //const obj = JSON.parse(msgString); // payload is a buffer
+      const obj = JSON.parse(msgString.toString()); // payload is a buffer
+      console.log(obj);
+      let rec0 = obj[0].TransDate;
+      console.log(`Record 0 => ${rec0} `);
+
+      mqttClient.publish('Sproc13318', msgString);
     });
   });
 }
